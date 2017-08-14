@@ -1,0 +1,8 @@
+#Get info about the image
+./vol.py -f /data/downloads/ch2.dmp imageinfo
+
+#Get hive info with hostname
+ ./vol.py -f /data/downloads/ch2.dmp --profile=Win7SP1x86 hivelist
+
+#Get the hostname from hivedata
+./vol.py -f /data/downloads/ch2.dmp --profile=Win7SP1x86 printkey -o 0x8b21c008 -K 'ControlSet001\Control\ComputerName\ComputerName'
